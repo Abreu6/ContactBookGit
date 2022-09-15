@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Main {
     //Constantes que definem os comandos
-    public static final String ADD_CONTACT    = "AC";
+    public static final string ADD_CONTACT    = "AC";
     public static final String REMOVE_CONTACT = "RC";
     public static final String GET_PHONE      = "GP";
     public static final String GET_EMAIL      = "GE";
@@ -22,6 +22,8 @@ public class Main {
     public static final String CONTACT_REMOVED = "contactBook.Contact removed.";
     public static final String CONTACT_UPDATED = "contactBook.Contact updated.";
     public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
+
+    public static final String PHONE_NOT_EXIST = "Phone number does not exist.";
     public static final String QUIT_MSG = "Goodbye!";
     public static final String COMMAND_ERROR = "Unknown command.";
 
@@ -146,5 +148,16 @@ public class Main {
             }
         }
         else System.out.println(BOOK_EMPTY);
+    }
+
+    private static void getContact(ContactBook cBook){
+        int phone = in.nextInt();
+       for (int i = 0; i>= cBook.length(); i++){
+           if( cBook[i].getPhone() = phone )
+               System.out.println(cBook[i].getName());
+           else
+               System.out.println(PHONE_NOT_EXIST);
+       }
+
     }
 }
